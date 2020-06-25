@@ -1,0 +1,27 @@
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1_v2.sh  My_File_1 -r
+reverse flag is enabled
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Odd
+Six Seven Eight
+Hello
+World
+Hello
+One Two Three For
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Even 
+Nine
+Two Three Five
+Hello World!
+Something to Say
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1
+One Two Three For
+Hello
+World
+Something to Say
+Hello World!
+Hello
+Two Three Five
+Six Seven Eight
+Nine
+dmi@dmi-lpt:~/newrelic_task$ 

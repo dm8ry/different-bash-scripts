@@ -1,0 +1,81 @@
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1_words.sh  My_File_1
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1_words.sh  My_File_1 -v
+file1 = My_File_1
+file2 =
+file3 =
+flag_usage = 0
+flag_debug = 1
+flag_reverse = 0
+start ./the_script_1_words.sh.sh
+input_file = ./my_files/My_File_1
+remove existing file ./my_files/My_File_1_Odd
+remove existing file ./my_files/My_File_1_Even
+end ./the_script_1_words.sh
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_
+My_File_1_Even  My_File_1_Odd   
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_
+My_File_1_Even  My_File_1_Odd   
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Odd 
+One
+Two
+Three
+For
+Hello
+World
+Something
+Say
+Hello
+Hello
+Two
+Three
+Six
+Seven
+Eight
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Even 
+to
+World!
+Five
+Nine
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1
+One Two Three For
+Hello
+World
+Something to Say
+Hello World!
+Hello
+Two Three Five
+Six Seven Eight
+Nine
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1_words.sh  My_File_1 -r
+reverse flag is enabled
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Even 
+Nine
+Five
+World!
+to
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Odd 
+Eight
+Seven
+Six
+Three
+Two
+Hello
+Hello
+Say
+Something
+World
+Hello
+For
+Three
+Two
+One
+dmi@dmi-lpt:~/newrelic_task$ 

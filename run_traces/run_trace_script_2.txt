@@ -1,0 +1,150 @@
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_2.sh 
+Usage: ./the_script_2.sh [-h|-v] fileName1 filename2
+ -h = help
+ -v = verbose output, debug
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_2.sh -h shdjkf
+Usage: ./the_script_2.sh [-h|-v] fileName1 filename2
+ -h = help
+ -v = verbose output, debug
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_2.sh badsfjadf asdhfjasgfjsa
+File ./my_files/badsfjadf not found!
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_2.sh My_File_4_a My_File_4_b
+New files created:
+./my_files/Output_File_Result
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_4_a 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_4_b
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+-10
+-11
+-12
+-13
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/Output_File_Result
+1
+-1
+-2
+2
+3
+4
+-3
+-4
+-5
+-6
+5
+6
+7
+8
+9
+-7
+-8
+-9
+-10
+-11
+-12
+10
+11
+12
+13
+14
+15
+16
+-13
+17
+18
+19
+20
+21
+dmi@dmi-lpt:~/newrelic_task$
+
+
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_2.sh My_File_4_a My_File_4_b -v
+file1 = My_File_4_a
+file2 = My_File_4_b
+file3 =
+flag_usage = 0
+flag_debug = 1
+input_file_1 = ./my_files/My_File_4_a
+input_file_2 = ./my_files/My_File_4_b
+remove existing file ./my_files/Output_File_Result
+file #1; NR>=1 && NR<2
+nRealLines=1
+nElements (f1) = 1
+nOffset_file_1 = 2
+--- ---
+file #2; NR>=1 && NR<3
+nRealLines=2
+nElements (f2) = 2
+nOffset_file_2 = 3
+
+file #1; NR>=2 && NR<5
+nRealLines=3
+nElements (f1) = 3
+nOffset_file_1 = 5
+--- ---
+file #2; NR>=3 && NR<7
+nRealLines=4
+nElements (f2) = 4
+nOffset_file_2 = 7
+
+file #1; NR>=5 && NR<10
+nRealLines=5
+nElements (f1) = 5
+nOffset_file_1 = 10
+--- ---
+file #2; NR>=7 && NR<13
+nRealLines=6
+nElements (f2) = 6
+nOffset_file_2 = 13
+
+file #1; NR>=10 && NR<17
+nRealLines=7
+nElements (f1) = 7
+nOffset_file_1 = 17
+--- ---
+file #2; NR>=13 && NR<21
+nRealLines=1
+nElements (f2) = 8
+nOffset_file_2 = 21
+
+file #1; NR>=17 && NR<26
+nRealLines=5
+nElements (f1) = 9
+nOffset_file_1 = 26
+--- ---
+file #2; NR>=21 && NR<31
+nRealLines=0
+nElements (f2) = 10
+nOffset_file_2 = 31
+
+end ./the_script_2.sh
+New files created:
+./my_files/Output_File_Result
+dmi@dmi-lpt:~/newrelic_task$

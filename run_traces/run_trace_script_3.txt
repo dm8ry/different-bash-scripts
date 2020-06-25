@@ -1,0 +1,23 @@
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_3.sh My_File_3_a My_File_3_b -v
+file1 = My_File_3_a
+file2 = My_File_3_b
+file3 =
+flag_usage = 0
+flag_debug = 1
+flag_replace = 0
+input_file_1 = ./my_files/My_File_3_a
+input_file_2 = ./my_files/My_File_3_b
+end ./the_script_3.sh
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_3.sh My_File_3_a My_File_3_b -h
+Usage: ./the_script_3.sh [-h|-v|-r] fileName1 filename2
+ -h = help
+ -v = verbose output, debug
+ -r = replace
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_3.sh My_File_3_a My_File_3_b -r
+New files created:
+./my_files/Output_File_Result
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/Output_File_Result
+hi hello google 123
+grafana puppet terraform
+test datadog devops
+dmi@dmi-lpt:~/newrelic_task$ 

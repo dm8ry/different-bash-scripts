@@ -1,0 +1,98 @@
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1.sh  My_File_1 -r
+reverse flag is enabled
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1.sh  My_File_1 
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1
+One Two Three For
+Hello
+World
+Something to Say
+Hello World!
+Hello
+Two Three Five
+Six Seven Eight
+Nine
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/
+My_File_1           My_File_1_Even      My_File_1_Odd       My_File_2_a         My_File_2_aa        My_File_2_b         My_File_2_bb        My_File_3_a         My_File_3_b         Output_File_Result
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Odd 
+One Two Three For
+Hello
+World
+Hello
+Six Seven Eight
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Even 
+Something to Say
+Hello World!
+Two Three Five
+Nine
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1.sh  My_File_1 -r
+reverse flag is enabled
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Odd 
+Six Seven Eight
+Hello
+World
+Hello
+One Two Three For
+dmi@dmi-lpt:~/newrelic_task$ cat ./my_files/My_File_1_Even 
+Nine
+Two Three Five
+Hello World!
+Something to Say
+dmi@dmi-lpt:~/newrelic_task$ 
+
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1.sh  My_File_1 -h
+Usage: ./the_script_1.sh [-h|-v|-r] fileName1 
+ -h = help
+ -v = verbose output, debug
+ -r = reverse
+dmi@dmi-lpt:~/newrelic_task$ ./the_script_1.sh  My_File_1 -v
+file1 = My_File_1
+file2 =
+file3 =
+flag_usage = 0
+flag_debug = 1
+flag_reverse = 0
+start ./the_script_1.sh.sh
+input_file = ./my_files/My_File_1
+remove existing file ./my_files/My_File_1_Odd
+remove existing file ./my_files/My_File_1_Even
+line = [One Two Three For]
+n_length = 17
+odd
+line = [Hello]
+n_length = 5
+odd
+line = [World]
+n_length = 5
+odd
+line = [Something to Say]
+n_length = 16
+even
+line = [Hello World!]
+n_length = 12
+even
+line = [Hello]
+n_length = 5
+odd
+line = [Two Three Five]
+n_length = 14
+even
+line = [Six Seven Eight]
+n_length = 15
+odd
+line = [Nine]
+n_length = 4
+even
+end ./the_script_1.sh
+New files created:
+./my_files/My_File_1_Odd
+./my_files/My_File_1_Even
+dmi@dmi-lpt:~/newrelic_task$ 
