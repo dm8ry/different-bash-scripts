@@ -137,9 +137,10 @@ do
 	nRealLines=`cat "$input_file_1" | awk -v b="$nOffset_file_1" -v e="$((nOffset_file_1 + nElements + 1))" ' NR>=b && NR<e ' | wc -l | awk ' { print $1 } ' `	
 	dbg_print "nRealLines=$nRealLines"
 
+	nExitWhile1=0
 	if [[ nRealLines -eq 0 ]]
 	then
-		nExitWhile=1
+		nExitWhile1=1
 	else
 		cat "$input_file_1" | awk -v b="$nOffset_file_1" -v e="$((nOffset_file_1 + nElements + 1))" ' NR>=b && NR<e ' >> $output_file_result
 	fi
@@ -160,9 +161,10 @@ do
         nRealLines=`cat "$input_file_2" | awk -v b="$nOffset_file_2" -v e="$((nOffset_file_2 + nElements + 1))" ' NR>=b && NR<e ' | wc -l | awk ' { print $1 } ' `
         dbg_print "nRealLines=$nRealLines"
 
+	nExitWhile2=0
         if [[ nRealLines -eq 0 ]]
         then
-                nExitWhile=1
+                nExitWhile2=1
         else
                 cat "$input_file_2" | awk -v b="$nOffset_file_2" -v e="$((nOffset_file_2 + nElements + 1))" ' NR>=b && NR<e ' >> $output_file_result
         fi
@@ -178,10 +180,10 @@ do
 
 	nStep=$((nStep+1))
 
-	if [[ $nStep -gt 20 ]]
-        then
-           nExitWhile=1
-        fi
+	if [[ nExitWhile1 -eq 1 && nExitWhile2 -eq 1 ]]
+	then
+		nExitWhile=1
+	fi
 
 done
 
