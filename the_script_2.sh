@@ -125,9 +125,6 @@ touch $output_file_result
 nOffset_file_1=1
 nOffset_file_2=1
 
-nLinesFile1=20
-nLinesFile2=30
-
 nStep=1
 
 while [[ $nExitWhile -eq 0 ]]
