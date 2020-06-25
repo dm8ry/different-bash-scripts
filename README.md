@@ -13,6 +13,11 @@ the_script_1_lines_v2.sh
 
 Just another version of the the_script_1_lines.sh
 
+the_script_1_words.sh
+---------------------
+
+The same like the_script_1_lines.sh, but works on the level of words.
+
 the_script_2.sh
 ---------------
 
